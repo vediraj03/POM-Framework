@@ -5,24 +5,26 @@ import java.io.IOException;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pages.LoginPage;
-import projectBase.ProjectSpecificMethod;
+import com.leafBot.pages.LoginPage;
+import com.leafBot.testng.api.base.ProjectSpecificMethods;
 
-public class MergeLeadTestCase extends ProjectSpecificMethod{
+public class MergeLeadTestCase extends ProjectSpecificMethods{
 	
 
 	@BeforeTest
 	public void setData() {
 		excelFileName="MergeLead";
-		sheetName="Sheet1";
+		testcaseName="Merge Lead";
+		  testcaseDec = "me the existing two leads in Leaftaps"; author="Vediraj";
+		  category="smoke";
 		
 	}
 	
-	@Test(dataProvider="fechData")
+	@Test(dataProvider="fetchData")
 	
 	public void tc005_MergeLeadTestCase(String uName,String password,String name) throws InterruptedException, IOException{
 		
-		new LoginPage().enterUserName(uName).eneterPassword(password).clickLogin()
+		new LoginPage().enterUsername(uName).enterPassword(password).clickLogin()
 		.clickOnCRMLink().clickLeads().clickOnMergeLeads()
 		.clickOnFromLead().switchToNewFindLeadsWindow().enterFirstNameW(name)
 		.clickOnFindLeadsButton().clickOnFromFirstValue().switchToMergeLeadWindow()

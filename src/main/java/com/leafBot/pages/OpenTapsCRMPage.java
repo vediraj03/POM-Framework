@@ -1,21 +1,21 @@
 package com.leafBot.pages;
 
-import org.openqa.selenium.WebElement;
+import com.leafBot.selenium.api.base.SeleniumBase;
 
-import projectBase.ProjectSpecificMethod;
 
-public class OpenTapsCRMPage extends ProjectSpecificMethod{
+public class OpenTapsCRMPage extends SeleniumBase{
 	
 	public OpenTapsCRMPage updateCompanyName(String uCompanyName) {
-		WebElement eleEditCompany = driver.findElementById("updateLeadForm_companyName");
-		eleEditCompany.clear();
-		eleEditCompany.sendKeys(uCompanyName);
+		clearAndType(locateElement("id", "updateLeadForm_companyName"), uCompanyName);
+		
 		return this;
 		
 	}
 	
 	public ViewLeadsPage clickUpadte() {
-		driver.findElementByXPath("//input[@value='Update']").click();
+		
+		click(locateElement("xpath", "//input[@value='Update']"));
+		
 		return new ViewLeadsPage();
 		
 	}
