@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="CreateLead">
+     <classes>
+    <class name="com.leafBot.testcases.CreateLeadTestCase"/>
+          </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="DeleteLead">
+    <classes>
+    <class name="com.leafBot.testcases.DeleteLeadTestCase"/>
+          </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="DuplicateLead">
+    <classes>
+    <class name="com.leafBot.testcases.DuplicateLeadTestCase"/>
+          </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="EditLead">
+    <classes>
+    <class name="com.leafBot.testcases.EditLeadTestCase"/>
+          </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="MergeLead">
+    <classes>
+    <class name="com.leafBot.testcases.MergeLeadTestCase"/>
+          </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
