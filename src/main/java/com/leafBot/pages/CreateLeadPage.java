@@ -6,7 +6,6 @@ import com.leafBot.selenium.api.base.SeleniumBase;
 
 public class CreateLeadPage extends SeleniumBase {
 	
-	
 	public CreateLeadPage enterCompanyName(String CompanyName) {
 		clearAndType(locateElement("xpath","//input[@id='createLeadForm_companyName']"), CompanyName);
 		
