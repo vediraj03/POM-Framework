@@ -1,7 +1,5 @@
 package com.leafBot.pages;
 
-import org.openqa.selenium.By;
-
 import com.leafBot.selenium.api.base.SeleniumBase;
 
 public class CreateLeadPage extends SeleniumBase {
